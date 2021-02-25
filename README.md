@@ -27,7 +27,7 @@ $ git clone https://github.com/yurasenchuk/user_groups.git
 
 ## Required files  
 
-Create .env.dev file in /backend directory
+Create .env file in /backend directory
 
 Enter settings data in file    
 File example:  
@@ -37,12 +37,21 @@ File example:
       DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]  
       SQL_ENGINE=django.db.backends.postgresql  
       SQL_DATABASE= #post_api  
-      SQL_USER= #my_username  
-      SQL_PASSWORD= #my_password  
+      SQL_USER= #your_username  
+      SQL_PASSWORD= #your_password  
       SQL_HOST=db  
       SQL_PORT=5432  
       DATABASE=postgres   
 
+
+Configure docker-compose.yml :
+     ...
+     environment:  
+      - POSTGRES_DB= #user_group  
+      - POSTGRES_USER= #your_username  
+      - POSTGRES_PASSWORD= #your_password    
+      - PGDATA=/var/lib/postgresql/data/pgdata  
+     ...  
 
 ## Run
 
