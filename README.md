@@ -36,7 +36,7 @@ File example:
       SECRET_KEY= #my_secret_key  
       DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]  
       SQL_ENGINE=django.db.backends.postgresql  
-      SQL_DATABASE= #post_api  
+      SQL_DATABASE= #user_group   
       SQL_USER= #your_username  
       SQL_PASSWORD= #your_password  
       SQL_HOST=db  
