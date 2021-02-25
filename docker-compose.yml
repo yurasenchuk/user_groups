@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:11.4-alpine
+    container_name: database
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data/pgdata
+    environment:
+      - POSTGRES_DB=user_group
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=591563
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    restart: always
+  backend:
+    container_name: backend_user_group
+    build: ./backend
+    ports:
+      - 8000:8000
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/backend
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - database
+  frontend:
+    container_name: frontend_user_group
+    build: ./frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
+      - /frontend/node_modules
+    command: npm start

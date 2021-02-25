@@ -1,0 +1,10 @@
+.home {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+}
+
+.text-p {
+    font-size: 20px;
+}

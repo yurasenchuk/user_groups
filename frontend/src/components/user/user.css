@@ -1,0 +1,11 @@
+.user-table-th {
+    border-right: medium solid #0d0d0d;
+    width: 25%;
+    text-align: center;
+}
+
+.user-table-td {
+    border-right: thin solid #0d0d0d;
+    width: 25%;
+    text-align: center;
+}
