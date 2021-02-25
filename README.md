@@ -45,13 +45,16 @@ File example:
 
 
 Configure docker-compose.yml :
-     ...
-     environment:  
+
+     ...  
+     environment:    
       - POSTGRES_DB= #user_group  
       - POSTGRES_USER= #your_username  
       - POSTGRES_PASSWORD= #your_password    
       - PGDATA=/var/lib/postgresql/data/pgdata  
      ...  
+     
+     
 
 ## Run
 
